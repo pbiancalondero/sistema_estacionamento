@@ -27,18 +27,28 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtTitle = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCadastro = new javax.swing.JMenu();
         miPessoa = new javax.swing.JMenuItem();
         miVeiculo = new javax.swing.JMenuItem();
         menuMovimentacoes = new javax.swing.JMenu();
-        miEntradaVeiculo = new javax.swing.JMenuItem();
-        miSaidaVeiculo = new javax.swing.JMenuItem();
         miMovDia = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
         miSobre = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        txtTitle.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
+        txtTitle.setForeground(new java.awt.Color(0, 51, 51));
+        txtTitle.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTitle.setText("Sistema de Controle de Estacionamento");
+        txtTitle.setBorder(new javax.swing.border.MatteBorder(null));
+        txtTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTitleActionPerformed(evt);
+            }
+        });
 
         menuCadastro.setText("Cadastro");
 
@@ -66,12 +76,6 @@ public class MainJFrame extends javax.swing.JFrame {
                 menuMovimentacoesActionPerformed(evt);
             }
         });
-
-        miEntradaVeiculo.setText("Entrada");
-        menuMovimentacoes.add(miEntradaVeiculo);
-
-        miSaidaVeiculo.setText("Saída");
-        menuMovimentacoes.add(miSaidaVeiculo);
 
         miMovDia.setText("Movimentações do dia");
         miMovDia.addActionListener(new java.awt.event.ActionListener() {
@@ -101,11 +105,14 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 711, Short.MAX_VALUE)
+            .addComponent(txtTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 466, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(txtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         pack();
@@ -134,6 +141,10 @@ public class MainJFrame extends javax.swing.JFrame {
         TelaMovimentacoesDia telaMovimentacoes = new TelaMovimentacoesDia();
        telaMovimentacoes.setVisible(true);
     }//GEN-LAST:event_miMovDiaActionPerformed
+
+    private void txtTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTitleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTitleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,11 +186,10 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuCadastro;
     private javax.swing.JMenu menuMovimentacoes;
-    private javax.swing.JMenuItem miEntradaVeiculo;
     private javax.swing.JMenuItem miMovDia;
     private javax.swing.JMenuItem miPessoa;
-    private javax.swing.JMenuItem miSaidaVeiculo;
     private javax.swing.JMenuItem miSobre;
     private javax.swing.JMenuItem miVeiculo;
+    private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
 }
